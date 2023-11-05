@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none ;
+
+}
+body{
+    background-color: hsl(252, 30%, 95%);
+    overflow: hidden;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+nav{
+    width: 100%;
+    background-color: hsl(252, 30%, 100%);
+    padding: 0.7rem 0;
+    top: 0;
+    z-index: 10;
+
+}
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search-bar{
+    background-color: hsl(252, 30%, 95%);
+    border-radius: 2rem;
+    padding: 0.6rem 1rem;
+}
+.search-bar input[type="search"]{
+    background: transparent;
+    width: 30rem;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    color:hsl(252, 30%, 17%);
+     
+}
+nav .button{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav .button p{
+ 
+    padding: 0.6rem 2rem;
+    font-weight: 500;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    background-color: hsl(252, 25%, 96%);
+    transition: all 300ms ease;
+  
+     
+}
+nav .button p a{
+    text-decoration: none;
+    color: #3c00a0;
+    font-weight: bold;
+}
+nav .button p:hover{
+ 
+    padding: 0.6rem 2rem;
+    font-weight: 500;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    color: while;
+    background-color: hsl(252, 25%, 70%);
+    transition: all 300ms ease;
+
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+.home .main-text{
+    text-align: center;
+    padding: 250px 10% 10px;
+}
+.main-text h1{
+    font-size: 60px;
+    color: #f0f0f0;
+    text-shadow: 0px 0px 1px black;
+
+}
+.main-text .two{
+    color: yellow;
+}
+.home .main-text p{
+    color: #fff;
+    margin-top: 5px;
+}
+.home .btn{
+    width: 200px;
+    height: 36px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: white;
+    color: #388b6f;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid #388b6f;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+.home .btn:hover{
+    background-color: #388b6f;
+    color: white;
+}
