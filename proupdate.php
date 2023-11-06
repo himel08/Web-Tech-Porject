@@ -13,11 +13,7 @@ else if(isset($_GET['logout']))
 }
 
 
-$servername="localhost";
-$username="root";
-$pass="";
-$dbname="web";
-$conn= mysqli_connect($servername,$username,$pass,$dbname);
+include "db_conn1.php";
 
 $email = $_SESSION['email'];
 $sql1 = "SELECT * FROM project WHERE email='$email'";

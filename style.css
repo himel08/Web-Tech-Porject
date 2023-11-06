@@ -8,18 +8,28 @@
 }
 body{
     background-color: hsl(252, 30%, 95%);
-    overflow: hidden;
+   
 }
 .container{
     width: 80%;
     margin: 0 auto;
 }
+
+/*---------- Navbar Section-----------*/
+/*---------- Navbar Section-----------*/
+/*---------- Navbar Section-----------*/
+/*---------- Navbar Section-----------*/
+/*---------- Navbar Section-----------*/
+/*---------- Navbar Section-----------*/
+
+
 nav{
     width: 100%;
     background-color: hsl(252, 30%, 100%);
     padding: 0.7rem 0;
     top: 0;
     z-index: 10;
+    position: sticky;
 
 }
 nav .container{
@@ -68,11 +78,18 @@ nav .button p:hover{
     font-weight: 500;
     border-radius: 1.5rem;
     cursor: pointer;
-    color: while;
+    color: white;
     background-color: hsl(252, 25%, 70%);
     transition: all 300ms ease;
 
 }
+
+/*---------- Home Section-----------*/
+/*---------- Home Section-----------*/
+/*---------- Home Section-----------*/
+/*---------- Home Section-----------*/
+/*---------- Home Section-----------*/
+/*---------- Home Section-----------*/
 
 .home{
     width: 100%;
@@ -81,6 +98,7 @@ nav .button p:hover{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
+
 }
 .home .main-text{
     text-align: center;
@@ -117,3 +135,61 @@ nav .button p:hover{
     background-color: #388b6f;
     color: white;
 }
+
+/*----------Product Display Section-----------*/
+/*----------Product Display Section-----------*/
+/*----------Product Display Section-----------*/
+/*----------Product Display Section-----------*/
+/*----------Product Display Section-----------*/
+/*----------Product Display Section-----------*/
+
+#product1{
+    text-align: center;
+}
+#product1 .pro{
+    width: 22%;
+    min-height: 400px;
+    padding: 35px 12px;
+    border: 1px  #cce7d0;
+    border-radius: 25px;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.2);
+    margin: 15px 0;
+    cursor: pointer;
+    transition: 0.2s ease;
+    background: #fff;
+    position: relative;
+}
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.4);
+}
+#product1 .pro img{
+    border-radius: 20px;
+    
+    
+}
+#product1 .pro-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pro button{
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid rgb(184, 182, 182);
+}
+
+.pro button:hover{
+    background-color: #388b6f;
+    color: #fff;
+}
+
+

@@ -48,11 +48,7 @@
 
     <?php
 session_start();
-$servername="localhost";
-$username="root";
-$pass="";
-$dbname="web";
-$conn= mysqli_connect($servername,$username,$pass,$dbname);
+include "db_conn1.php";
 if(isset($_GET['signin']))
 {
    

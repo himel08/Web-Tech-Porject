@@ -1,9 +1,5 @@
 <?php
-$servername="localhost";
-$username="root";
-$pass="";
-$dbname="web";
-$conn= new mysqli($servername,$username,$pass,$dbname);
+include "bd_conn1.php";
 if(isset($_GET['signup']))
 {
     $name=$_GET['name'];
