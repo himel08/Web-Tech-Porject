@@ -5,14 +5,16 @@ if(isset($_GET['signup']))
     $name=$_GET['name'];
     $email=$_GET['email'];
     $number=$_GET['number'];
+    $sname=$_GET['sname'];
+    $address=$_GET['address'];
     $pass=$_GET['pass'];
     
-    if (empty($name) || empty($email) || empty($number) || empty($pass)) {
+    if (empty($name) || empty($email) || empty($number) || empty($sname) ||empty($address) || empty($pass)) {
         echo "Please fill in all the fields before submitting.";
     }
 
     else{
-        $sql1="INSERT INTO `project` (`NAME`, `EMAIL`, `NUMBER`, `PASS`) VALUES('$name','$email','$number','$pass')";
+        $sql1="INSERT INTO `seller` (`NAME`, `EMAIL`,`NUMBER`,`SNAME`,`ADDRESS`, `PASS`) VALUES('$name','$email','$number','$sname','$address','$pass')";
         mysqli_query($conn,$sql1);
        
     }
@@ -36,7 +38,7 @@ if(isset($_GET['signup']))
 <body>
     <div class="container">
         <div class="form-box">
-            <h1 id="title">Sign Up</h1>
+            <h1 id="title">Seller Sign Up</h1>
             <form  method="get" action="">
                 <div class="input-group">
 
@@ -56,6 +58,16 @@ if(isset($_GET['signup']))
                     <input type="number" name="number" placeholder="Enter Your Number"><br>
                 </div>
 
+                <div class="input-field" id="numField">
+                <i class="fa-solid fa-phone"></i>
+                    <input type="text" name="sname" placeholder="Enter Your Shop Name"><br>
+                </div>
+
+                <div class="input-field" id="numField">
+                <i class="fa-solid fa-phone"></i>
+                    <input type="text" name="address" placeholder="Enter Your Address"><br>
+                </div>
+
                 <div class="input-field">
                 <i class="fa-solid fa-lock"></i>
                     <input type="password" name="pass" placeholder="Password" id="myInput">
@@ -66,12 +78,12 @@ if(isset($_GET['signup']))
                     </span>
                 </div>
                 
-                <p >Already have account? <a href="signin.php">Click Here</a></p>
+                <p >Already have account? <a href="sellersignin.php">Click Here</a></p>
                 
                 <div class="btn-field">
                     <button type="submit" name="signup" id="signupbtn">Sign Up</button>
                     <button type="submit" name="signin" id="signinbtn" class="disable">
-                        <a href="signin.php" class="dis">Sign In</a>
+                        <a href="sellersignin.php" class="dis">Sign In</a>
                     </button>
                   
                 </div>

@@ -193,3 +193,53 @@ nav .button p:hover{
 }
 
 
+/*----------Footer Section-----------*/
+/*----------Footer Section-----------*/
+/*----------Footer Section-----------*/
+/*----------Footer Section-----------*/
+/*----------Footer Section-----------*/
+/*----------Footer Section-----------*/
+footer{
+    background-color: #cce7d0;
+    height: 20vh;
+    box-shadow:;
+    margin-top: 20px;
+    padding: 20px 0;
+    text-align: center;
+}
+footer .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+footer ul{
+  list-style: none;
+}
+footer .footer-col{
+    width: 25%;
+    
+    align-items: center;
+    font-size: 20px;
+  
+}
+footer .footer-col h4{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    position: relative;
+}
+footer .footer-col li a{
+    text-decoration: none;
+    color: #388b6f;
+}
+footer .footer-col h4::before{
+    content: "";
+    position: absolute;
+    left: 165px;
+    right: 0;
+    top: 35px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+
+}

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+<marquee behavior="" direction="right">Upto 35% off on Winter Collection</marquee>
     <nav >
 
     <div class="container">
@@ -211,16 +211,58 @@
 
  </div>
 </section>
-
-
+ 
 <!--------- Footer Section ---------->
 <!--------- Footer Section ---------->
 <!--------- Footer Section ---------->
 <!--------- Footer Section ---------->
 
-<section>
+<footer >
+<div class="container">
+  <div class="row">
+    <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+            <li><a href="sellersignup.php">Become a Seller</a></li>
+            <li><a href="sellersignin.php">Login As Seller</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+    </div>
 
-</section>
+    <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
+</footer>
+
+
+
+
+
 </body>
 
 </html>
