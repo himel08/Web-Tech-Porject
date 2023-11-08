@@ -11,7 +11,7 @@ body{
    
 }
 .container{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -202,7 +202,6 @@ nav .button p:hover{
 footer{
     background-color: #cce7d0;
     height: 20vh;
-    box-shadow:;
     margin-top: 20px;
     padding: 20px 0;
     text-align: center;

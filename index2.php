@@ -61,6 +61,11 @@ if(isset($_GET['update']))
                
                
             </div>
+            <div class="cart">
+                <i class="fa-solid fa-cart-plus">
+                    <span>0</span>
+                </i>
+            </div>
            
         </div>
         
