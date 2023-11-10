@@ -72,8 +72,10 @@
 
                 <li>
                     <a href="">
-                    <i class="fa-solid fa-moon"></i>
-                    <span class="link-name" class="mode-toggle">Mood change</span>
+                    <i class="fa-solid fa-moon" id="icon"></i>
+                    <div class="link"> 
+                    <span class="link-name" >Mood change</span>
+                    </div>
                     </a>
                 </li>
             </ul>
@@ -81,12 +83,15 @@
     </nav>
     <script>
 
-        const body = document.querySelector("body"),
-        modeToggle = body.querySelector(".mode-toggle");
+     const body = document.querySelector("body"),
+     modeToggle = document.querySelector(".link");
 
         modeToggle.addEventListener("click", () =>{
-            body,classList.toggle("dark");
-        })
+            body.classList.toggle("dark");
+
+            
+        });
+
     </script>
 </body>
 </html>

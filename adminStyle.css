@@ -5,21 +5,31 @@
 /*-------- Admin.Php---------*/
 /*-------- Admin.Php---------*/
 
+:root{
+
+    --primary-color: #388b6f;
+    --secondary-color:#fff;
+
+}
+.dark{
+    --primary-color: #000106;
+    --secondary-color:#2e2c2c;
+
+}
+
 body{
     min-height: 100vh;
-    background-color: #388b6f;
+    background-color: var(--primary-color);
     margin: 0 auto;
 }
-body.dark{
-    background-color: #707070;
-}
+
 nav{
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 250px;
-    background-color: #fff;
+    background-color: var(--secondary-color);
 }
 nav .menu-item{
     display: flex;
