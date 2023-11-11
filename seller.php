@@ -31,6 +31,7 @@ $info=mysqli_fetch_assoc($result);
     <title>Document</title>
 </head>
 <body>
+   <h1>Welcome to Seller Dashboard</h1>
     <nav>
         <div class="logo-name">
             <div class="logo-image">
@@ -49,16 +50,16 @@ $info=mysqli_fetch_assoc($result);
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="upproduct.php">
                     <i class="fa-solid fa-file"></i>
-                    <span class="link-name">Content</span>
+                    <span class="link-name">Upload Product</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="disproduct.php">
                     <i class="fa-solid fa-envelope"></i>
-                    <span class="link-name">Massage</span>
+                    <span class="link-name">View Listing</span>
                     </a>
                 </li>
 
@@ -95,22 +96,27 @@ $info=mysqli_fetch_assoc($result);
                 </li>
 
                 <li>
-                    <a href="">
-                    <i class="fa-solid fa-moon"></i>
-                    <span class="link-name" class="mode-toggle">Mood change</span>
+                <a href="">
+                    <i class="fa-solid fa-moon" id="icon"></i>
+                    <div class="link"> 
+                    <span class="link-name" >Mood change</span>
+                    </div>
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
+     
     <script>
-
-        const body = document.querySelector("body"),
-        modeToggle = body.querySelector(".mode-toggle");
+ const body = document.querySelector("body"),
+     modeToggle = document.querySelector(".link");
 
         modeToggle.addEventListener("click", () =>{
-            body,classList.toggle("dark");
-        })
+            body.classList.toggle("dark");
+
+            
+        });
+
     </script>
 </body>
 </html>

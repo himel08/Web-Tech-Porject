@@ -62,9 +62,8 @@ if(isset($_GET['update']))
                
             </div>
             <div class="cart">
-                <i class="fa-solid fa-cart-plus">
-                    <span>0</span>
-                </i>
+                <i class="fa-solid fa-cart-plus"></i>
+                <span id="span">0</span>
             </div>
            
         </div>
@@ -118,8 +117,7 @@ if(isset($_GET['update']))
 
         </div>
 
-        
-        <button>Buy Now</button>
+        <button class="add-cart">Buy Now</button>
         
         
     </div>
@@ -140,7 +138,7 @@ if(isset($_GET['update']))
         <h4>$280</h4>
 
         </div>
-        <button>Buy Now</button>
+        <button class="add-cart">Buy Now</button>
     </div>
     <div class="pro">
         <img src="img/img/p5.png" alt="">
@@ -158,7 +156,7 @@ if(isset($_GET['update']))
         <h4>$190</h4>
 
         </div>
-        <button>Buy Now</button>
+        <button class="add-cart">Buy Now</button>
     </div>
     <div class="pro">
     <img src="img/img/p12.png" alt="">
@@ -176,7 +174,7 @@ if(isset($_GET['update']))
         <h4>$150</h4>
 
         </div>
-        <button>Buy Now</button>
+        <button class="add-cart">Buy Now</button>
     </div>
     <div class="pro">
     <img src="img/img/p3.png" alt="">
@@ -194,7 +192,7 @@ if(isset($_GET['update']))
         <h4>$170</h4>
 
         </div>
-        <button>Buy Now</button>
+        <button class="add-cart">Buy Now</button>
     </div>
     <div class="pro">
     <img src="img/img/p8.png" alt="">
@@ -212,7 +210,7 @@ if(isset($_GET['update']))
         <h4>$320</h4>
 
         </div>
-        <button>Buy Now</button>
+        <button class="add-cart">Buy Now</button>
     </div>
     <div class="pro">
     <img src="img/img/p4.png" alt="">
@@ -230,7 +228,7 @@ if(isset($_GET['update']))
         <h4>$200</h4>
 
         </div>
-        <button>Buy Now</button>
+        <button class="add-cart">Buy Now</button>
     </div>
     <div class="pro">
     <img src="img/img/p1.png" alt="">
@@ -248,7 +246,7 @@ if(isset($_GET['update']))
         <h4>$450</h4>
 
         </div>
-        <button>Buy Now</button>
+        <button class="add-cart">Buy Now</button>
     </div>
 
  </div>
@@ -266,42 +264,44 @@ if(isset($_GET['update']))
     <div class="footer-col">
         <h4>Company</h4>
         <ul>
-            <li><a href="sellersignup.php">Become a Seller </a></li>
-            <li><a href="#">Login As Seller</a></li>
+            <li><a href="sellersignup.php">Become a Seller</a></li>
+            <li><a href="sellersignin.php">Login As Seller</a></li>
             <li><a href="#">About us</a></li>
         </ul>
     </div>
 
     <div class="footer-col">
-        <h4>Contact</h4>
+        <h4>Details</h4>
         <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="#">017xxxxxxx</a></li>
+            <li><a href="#">Webtech@gmail.com</a></li>
+            <li><a href="#">wwww.Webtech.com</a></li>
         </ul>
     </div>
 
     <div class="footer-col">
-        <h4>Company</h4>
+        <h4>Support</h4>
         <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="#">Order Track</a></li>
+            <li><a href="#">Help Desk</a></li>
+            <li><a href="#">Customer FAQ</a></li>
         </ul>
     </div>
 
     <div class="footer-col">
-        <h4>Company</h4>
+        <h4>Policies</h4>
         <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policies</a></li>
+            <li><a href="#">Refund Policies</a></li>
         </ul>
     </div>
   </div>
 </div>
 </footer>
 
+
+<script src="addcart.js"></script>
 </body>
 
 

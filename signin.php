@@ -36,6 +36,7 @@
                 </div>
 
                 <p >Forgot Password? <a href="#">Click Here</a></p>
+                <p>Create New Account <a href="signup.php">Click here</a></p>
                 <div class="btn-field">
                     <button type="submit" name="signup" id="signupbtn" class="disable"> <a href="signup.php">Sign Up</a></button>
                     <button type="submit" name="signin" id="signinbtn" >Sign In</button>

@@ -15,10 +15,11 @@
 
 .form-box{
     width: 80%;
+    height: 650px;
     max-width: 450px;
     position: absolute;
     left: 50%;
-    transform: translate(-50%,50%);
+    transform: translate(-50%,25%);
     background: #fff;
     padding: 50px 60px 70px;
     text-align: center;
@@ -115,15 +116,3 @@ form p a{
     font-size: 14px;
     transition: 5.s;
 }
-#insert{
-    font-size: 20px;
-    font-weight: bold;
-    padding: 6px;
-    width: 150px;
-    color: white;
-    background-color: blue;
-    border: 1px solid blue;
-    margin-left: 100px;
-    border-radius: 5px;
-
-  }

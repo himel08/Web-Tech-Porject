@@ -14,11 +14,14 @@
 <body>
     <div class="container">
         <div class="form-box">
-            <h1 id="title">Seller Sign In</h1>
-            <form  method="get" action="">
+            <h1 id="title">Admin Sign In</h1>
+            <form  method="get" action="#">
                 <div class="input-group">
 
-
+                <div class="input-field" id="nameField">
+                <i class="fa-solid fa-user"></i>
+                    <input type="text" name="uname" placeholder="Enter Your User name"><br>
+                </div>
                 <div class="input-field">
                 <i class="fa-solid fa-envelope"></i>
                     <input type="email" name="email" placeholder="Enter Your Email"><br>
@@ -36,8 +39,6 @@
                 </div>
 
                 <p >Forgot Password? <a href="#">Click Here</a></p>
-                <p>Create New Account <a href="sellersignup.php">Click here</a></p>
-               
                 <div class="btn-field">
                     <button type="submit" name="signup" id="signupbtn" class="disable"> <a href="sellersignup.php">Sign Up</a></button>
                     <button type="submit" name="signin" id="signinbtn" >Sign In</button>
@@ -53,13 +54,13 @@ session_start();
 include "db_conn1.php";
 if(isset($_GET['signin']))
 {
-   
+    $uname=$_GET['uname'];
     $email=$_GET['email'];
     $pass=$_GET['pass'];
     
     
 
-    $sql="SELECT * FROM seller WHERE EMAIL='$email'AND PASS='$pass'";
+    $sql="SELECT * FROM admin WHERE USERNAME='$uname' AND EMAIL='$email'AND PASS='$pass'";
     $result=mysqli_query($conn,$sql);
  
     $count = mysqli_num_rows($result);
@@ -68,11 +69,12 @@ if(isset($_GET['signin']))
         while($r=mysqli_fetch_assoc($result))
         {
             $_SESSION['name']=$r["NAME"];
+            $_SESSION['uname']=$r["USERNAME"];
             $_SESSION['email']=$r["EMAIL"];
             $_SESSION['number']=$r["NUMBER"];
             $_SESSION['pass']=$r["PASS"];
             
-            header("Location:seller.php");
+            header("Location:admin.php");
         }
         
     }

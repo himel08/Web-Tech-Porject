@@ -22,7 +22,10 @@ body{
     background-color: var(--primary-color);
     margin: 0 auto;
 }
-
+body h1{
+    text-align: center;
+    
+}
 nav{
     position: fixed;
     top: 0;
