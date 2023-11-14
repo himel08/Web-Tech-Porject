@@ -157,22 +157,20 @@ nav .button p:hover{
     cursor: pointer;
     transition: 0.2s ease;
     background: #fff;
-    position: relative;
 }
+
+
 #product1 .pro:hover{
     box-shadow: 20px 20px 30px rgba(0,0,0,0.4);
 }
 #product1 .pro img{
-    border-radius: 20px;
-    
-    
+    border-radius: 20px; 
 }
 #img{
-    
         width: 180px;
         height: 180px;
 }
-#product1 .pro-container{
+#product1 .pro-container{ 
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -195,6 +193,49 @@ nav .button p:hover{
 }
 
 .pro button:hover{
+    background-color: #388b6f;
+    color: #fff;
+}
+
+
+/*----------Seller Product Display Section-----------*/
+/*----------Seller Product Display Section-----------*/
+/*----------Seller Product Display Section-----------*/
+/*----------Seller Product Display Section-----------*/
+/*----------Seller Product Display Section-----------*/
+/*----------Seller Product Display Section-----------*/
+#product1 .pro2{
+    width: 20%;
+    min-height: 400px;
+    padding: 50px;
+    border: 1px  #cce7d0;
+    border-radius: 25px;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.2);
+    margin: 20px 42px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    background: #fff;
+    float: left;
+}
+#product1 .pro2:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.4);
+}
+#product1 .pro2 img{
+    border-radius: 20px; 
+}
+
+.pro2 button{
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid rgb(184, 182, 182);
+}
+
+.pro2 button:hover{
     background-color: #388b6f;
     color: #fff;
 }

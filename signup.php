@@ -6,15 +6,17 @@ if(isset($_GET['signup']))
     $email=$_GET['email'];
     $number=$_GET['number'];
     $pass=$_GET['pass'];
+
+    $error = array();
     
     if (empty($name) || empty($email) || empty($number) || empty($pass)) {
-        echo "Please fill in all the fields before submitting.";
+        $error['pass2'] = "Fill all the input";
     }
 
     else{
         $sql1="INSERT INTO `project` (`NAME`, `EMAIL`, `NUMBER`, `PASS`) VALUES('$name','$email','$number','$pass')";
         mysqli_query($conn,$sql1);
-       
+        $error['pass1'] = "Account Create Succesfull";
     }
    
 }
@@ -35,7 +37,11 @@ if(isset($_GET['signup']))
 
 <body>
     <div class="container">
+    
         <div class="form-box">
+        <div class="p">
+                <p><?php if(isset($error['pass2'])) echo $error['pass2']; ?></p>
+                </div>
             <h1 id="title">Sign Up</h1>
             <form  method="get" action="">
                 <div class="input-group">
@@ -64,6 +70,10 @@ if(isset($_GET['signup']))
                     <i id="hide2" class="fa-solid fa-eye-slash"></i>
 
                     </span>
+                </div>
+
+                <div class="p">
+                <p><?php if(isset($error['pass1'])) echo $error['pass1']; ?></p>
                 </div>
                 
                 <p >Already have account? <a href="signin.php">Click Here</a></p>

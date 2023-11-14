@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<marquee behavior="" direction="right">Upto 35% off on Winter Collection</marquee>
+<marquee behavior="" direction="right">Up-to 35% off on All Furnitures</marquee>
     <nav >
 
     <div class="container">

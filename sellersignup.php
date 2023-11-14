@@ -8,6 +8,8 @@ if(isset($_GET['signup']))
     $sname=$_GET['sname'];
     $address=$_GET['address'];
     $pass=$_GET['pass'];
+
+  
     
     if (empty($name) || empty($email) || empty($number) || empty($sname) ||empty($address) || empty($pass)) {
         echo "Please fill in all the fields before submitting.";
@@ -16,6 +18,7 @@ if(isset($_GET['signup']))
     else{
         $sql1="INSERT INTO `seller` (`NAME`, `EMAIL`,`NUMBER`,`SNAME`,`ADDRESS`, `PASS`) VALUES('$name','$email','$number','$sname','$address','$pass')";
         mysqli_query($conn,$sql1);
+       
        
     }
    
@@ -77,6 +80,7 @@ if(isset($_GET['signup']))
 
                     </span>
                 </div>
+                
                 
                 <p >Already have account? <a href="sellersignin.php">Click Here</a></p>
                 

@@ -1,3 +1,38 @@
+<?php
+session_start();
+include "db_conn1.php";
+if(isset($_GET['signin']))
+{
+   
+    $email=$_GET['email'];
+    $pass=$_GET['pass'];
+    
+    $error = array();
+
+    $sql="SELECT * FROM project WHERE EMAIL='$email'AND PASS='$pass'";
+    $result=mysqli_query($conn,$sql);
+ 
+    $count = mysqli_num_rows($result);
+    if($count==1){
+
+        while($r=mysqli_fetch_assoc($result))
+        {
+            $_SESSION['name']=$r["NAME"];
+            $_SESSION['email']=$r["EMAIL"];
+            $_SESSION['number']=$r["NUMBER"];
+            $_SESSION['pass']=$r["PASS"];
+            
+            header("Location:index2.php");
+        }
+        
+    }
+    else{
+       $error['pass1'] = "You have Enter wrong pass or email";
+    }
+    
+   
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,11 +67,15 @@
                     <i id="hide2" class="fa-solid fa-eye-slash"></i>
 
                     </span>
+                    
                    
                 </div>
-
+                <div class="p">
+                <p><?php if(isset($error['pass1'])) echo $error['pass1']; ?></p>
+                </div>
+                
                 <p >Forgot Password? <a href="#">Click Here</a></p>
-                <p>Create New Account <a href="signup.php">Click here</a></p>
+               
                 <div class="btn-field">
                     <button type="submit" name="signup" id="signupbtn" class="disable"> <a href="signup.php">Sign Up</a></button>
                     <button type="submit" name="signin" id="signinbtn" >Sign In</button>
@@ -47,43 +86,7 @@
         </div>
     </div>
 
-    <?php
-session_start();
-include "db_conn1.php";
-if(isset($_GET['signin']))
-{
-   
-    $email=$_GET['email'];
-    $pass=$_GET['pass'];
     
-    
-
-    $sql="SELECT * FROM project WHERE EMAIL='$email'AND PASS='$pass'";
-    $result=mysqli_query($conn,$sql);
- 
-    $count = mysqli_num_rows($result);
-    if($count==1){
-
-        while($r=mysqli_fetch_assoc($result))
-        {
-            $_SESSION['name']=$r["NAME"];
-            $_SESSION['email']=$r["EMAIL"];
-            $_SESSION['number']=$r["NUMBER"];
-            $_SESSION['pass']=$r["PASS"];
-            
-            header("Location:index2.php");
-        }
-        
-    }
-    else{
-        echo "<script>
-        alert('Incorrect Password or Email')
-        </script>";
-    }
-    
-   
-}
-?>
 <script>
  function myfunction(){
     let x = document.getElementById("myInput");

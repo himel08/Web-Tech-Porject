@@ -9,8 +9,9 @@
     <title>Document</title>
 </head>
 <body>
+
     <div class="container">
-        <h1>Product List:</h1>
+     <h1>Your Product List</h1>
     <?php
           include 'db_conn1.php';
 
@@ -20,14 +21,22 @@
             ?>
         <section id="product1" class="product1">
             
-          <div class="pro-container">
-            <div class="pro">
-            <img id="img" src="image/<?php echo $info['product_image'] ; ?>" alt="">
-            <div class="des">
-            <span> <?php echo $info['product_name']; ?></span>
-            </div>
-            <h3>Price: <?php echo $info['product_price']; ?></h3>
-            <button class="add-cart">Buy Now</button>
+          <div class="pro-container1">
+            <div class="pro2">
+              <img id="img" src="image/<?php echo $info['product_image'] ; ?>" alt="">
+              <div class="des">
+                  <span> <?php echo $info['product_name']; ?></span>
+              </div>
+              <h3>Price: <?php echo $info['product_price']; ?></h3>
+              <div class="star">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+
+        </div>
+              <button class="add-cart">Buy Now</button>
             </div>
 
           </div>
