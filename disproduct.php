@@ -1,3 +1,29 @@
+<?php
+ include 'db_conn1.php';
+if(isset($_POST['add-cart'])){
+  $product_image =$_POST['product_image'];
+  $product_name =$_POST['product_name'];
+  $product_price =$_POST['product_price'];
+  $product_quanity=1;
+
+  $sql1 = "SELECT * FROM `cart` WHERE name='$product_name'";
+  $select_cart=mysqli_query($conn,$sql1);
+  if(mysqli_num_rows($select_cart)>0){
+    echo "product already added";
+  }
+  else{
+    $sql2="INSERT INTO `cart`(`name`, `price`, `image`, `quantity`) VALUES ('$product_name','$product_price','$product_image',$product_quanity)";
+    $insert_product=mysqli_query($conn,$sql2);
+    echo "product added to the cart";
+  }
+
+}
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +37,15 @@
 <body>
 
     <div class="container">
+     
+     <?php 
+     $select_product= mysqli_query($conn,"SELECT * FROM `cart`") or die('query_failed');
+     $row_count=mysqli_num_rows($select_product);
+     
+     ?>
      <h1>Your Product List</h1>
+     <i class="fa-solid fa-cart-plus"></i>
+                <span id="span"> <?php echo $row_count; ?></span>
     <?php
           include 'db_conn1.php';
 
@@ -23,21 +57,27 @@
             
           <div class="pro-container1">
             <div class="pro2">
-              <img id="img" src="image/<?php echo $info['product_image'] ; ?>" alt="">
+              <form method="POST" action="#">
+              <img id="img" src="image/<?php echo $info['product_image'] ;?>" alt="">
               <div class="des">
-                  <span> <?php echo $info['product_name']; ?></span>
+                <span> <?php echo $info['product_name']; ?></span>
               </div>
               <h3>Price: <?php echo $info['product_price']; ?></h3>
               <div class="star">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-regular fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
 
-        </div>
-              <button class="add-cart">Buy Now</button>
-            </div>
+                </div>
+              
+                    <input type="hidden" name="product_image" value="<?php echo $info['product_image'];  ?>">
+                    <input type="hidden" name="product_name" value="<?php echo $info['product_name']; ?>">
+                    <input type="hidden" name="product_price" value="<?php echo $info['product_price']; ?>">
+                    <input type="submit" name="add-cart" value="ADD CART"> 
+                      
+          </form>
 
           </div>
 
