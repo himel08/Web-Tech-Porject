@@ -17,7 +17,10 @@
     --lightgray: #d3d3d3;
     --red: rgb(238, 62, 62);
   }
-
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+  }
   .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -26,7 +29,11 @@
     background-color: var(--lightgray);
   }
 
-/* view_products.php */
+/* addToCart.php */
+/* addToCart.php */
+/* addToCart.php */
+/* addToCart.php */
+
 .shopping_cart table {
   text-align: center;
   width: 100%;

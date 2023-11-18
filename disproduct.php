@@ -44,8 +44,8 @@ if(isset($_POST['add-cart'])){
      
      ?>
      <h1>Your Product List</h1>
-     <i class="fa-solid fa-cart-plus"></i>
-                <span id="span"> <?php echo $row_count; ?></span>
+      <a href="addToCart.php"><i class="fa-solid fa-cart-plus"></i>
+                <span ><?php echo $row_count; ?></span></a>
     <?php
           include 'db_conn1.php';
 
