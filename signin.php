@@ -49,7 +49,7 @@ if(isset($_GET['signin']))
 <body>
     <div class="container">
         <div class="form-box">
-            <h1 id="title">Sign Up</h1>
+            <h1 id="title">Customer Sign In</h1>
             <form  method="get" action="">
                 <div class="input-group">
 

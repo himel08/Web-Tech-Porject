@@ -9,11 +9,7 @@ if(isset($_POST['update_product_quantity'])){
   echo "Update Successfully Done";
 
 }
-
-
   ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,49 +23,49 @@ if(isset($_POST['update_product_quantity'])){
         <section class="shopping_cart">
             <table>
                 
-                <?php 
-                include 'db_conn1.php';
-                $select_cart_product=mysqli_query($conn,"SELECT * FROM `cart`");
-                $num=1;
-                if(mysqli_num_rows($select_cart_product)>0){
-                    echo "   <thead>
-                    <th>SL No</th>
-                    <th>Product Name</th>
-                    <th>Product Image</th>
-                    <th>Product Price</th>
-                    <th>Product Quantity</th>
-                    <th>Total Price</th>
-                    <th>Action</th>
-                </thead>
-                <tbody>";
-                while($info1=mysqli_fetch_assoc($select_cart_product)){
-                    ?>
-                    <tr>
-                        <td><?php echo $num?></td>
-                        <td><?php echo $info1['name'] ;?></td>
-                        <td><img src="image/<?php echo $info1['image'] ;?>" alt=""></td>
-                        <td><?php echo $info1['price'] ;?></td>
-                        <td><form method="post" action="#">
-                            <input type="hidden" name="update_quantity_id" value="<?php echo $info1['id'] ;?>">
-                            <div class="quantity_box">
-                             <input type="number" min="1" value="<?php echo $info1['quantity'] ;?>" name="update_quantity">
-                             <input type="submit" class="update_quantity" value="Update" name="update_product_quantity"> 
-                            </div>
-
-                        </form>
-                </td>
+                    <?php 
+                    include 'db_conn1.php';
+                    $select_cart_product=mysqli_query($conn,"SELECT * FROM `cart`");
+                    $num=1;
+                    if(mysqli_num_rows($select_cart_product)>0){
+                        echo "   <thead>
+                        <th>SL No</th>
+                        <th>Product Name</th>
+                        <th>Product Image</th>
+                        <th>Product Price</th>
+                        <th>Product Quantity</th>
+                        <th>Total Price</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>";
+                    while($info1=mysqli_fetch_assoc($select_cart_product)){
+                        ?>
+                        <tr>
+                            <td><?php echo $num?></td>
+                            <td><?php echo $info1['name'] ;?></td>
+                            <td><img src="image/<?php echo $info1['image'] ;?>" alt=""></td>
+                            <td><?php echo $info1['price'] ;?></td>
+                            <td>
+                                <form method="post" action="#">
+                                        <input type="hidden" name="update_quantity_id" value="<?php echo $info1['id'] ;?>">
+                                    <div class="quantity_box">
+                                        <input type="number" min="1" value="<?php echo $info1['quantity'] ;?>" name="update_quantity">
+                                        <input type="submit" class="update_quantity" value="Update" name="update_product_quantity"> 
+                                    </div>
+                            </form>
+                        </td>
                         <td><?php echo $info1['price'] + 80 ;?></td>
                         <td>Remove</td>
-                    </tr>
-               <?php
-               $num++;
-                }
-                }
-                else{
-                    echo "no product";
-                }
-                ?>
-                       
+                        </tr>
+                <?php
+                $num++;
+                    }
+                    }
+                    else{
+                        echo "no product";
+                    }
+                    ?>
+                        
                 </tbody>
             </table>
 

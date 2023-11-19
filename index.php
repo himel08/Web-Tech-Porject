@@ -229,7 +229,7 @@
         <ul>
             <li><a href="sellersignup.php">Become a Seller</a></li>
             <li><a href="sellersignin.php">Login As Seller</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="adminsignin.php">Admin Login</a></li>
         </ul>
     </div>
 

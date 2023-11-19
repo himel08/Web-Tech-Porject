@@ -42,7 +42,7 @@ if(isset($_GET['signup']))
         <div class="p">
                 <p><?php if(isset($error['pass2'])) echo $error['pass2']; ?></p>
                 </div>
-            <h1 id="title">Sign Up</h1>
+            <h1 id="title">Customer Sign Up</h1>
             <form  method="get" action="">
                 <div class="input-group">
 
