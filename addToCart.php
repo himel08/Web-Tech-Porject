@@ -71,7 +71,7 @@ if(isset($_POST['update_product_quantity'])){
 
             <div class="table_bottom"> 
                 <a href="disproduct.php" class="bottom_btn">Continue Shopping</a>
-                <h3 class="bottom_btn">Grand Total <span>2500</span></h3>
+                <h3 class="bottom_btn">Grand Total <span>2080</span></h3>
                 <a href="#" class="bottom_btn">Check Out</a>
             </div>
             <a class="delete_all_btn">

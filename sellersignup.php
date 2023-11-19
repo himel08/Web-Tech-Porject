@@ -17,9 +17,7 @@ if(isset($_GET['signup']))
 
     else{
         $sql1="INSERT INTO `seller` (`NAME`, `EMAIL`,`NUMBER`,`SNAME`,`ADDRESS`, `PASS`) VALUES('$name','$email','$number','$sname','$address','$pass')";
-        mysqli_query($conn,$sql1);
-       
-       
+        mysqli_query($conn,$sql1); 
     }
    
 }

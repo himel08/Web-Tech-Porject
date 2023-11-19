@@ -61,6 +61,7 @@
             $sql="INSERT INTO products1(product_name,product_price,product_details,product_image)
             values('$product_name','$product_price','$product_details','$image_name')";
             $query=mysqli_query($conn,$sql);
+            echo "product Uploaded";
 
           }
       ?>
