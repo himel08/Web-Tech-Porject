@@ -27,7 +27,7 @@ if(isset($_GET['signin']))
         
     }
     else{
-       $error['pass1'] = "You have Enter wrong pass or email";
+       $error['pass1'] = "You have Enter wrong password or email";
     }
     
    

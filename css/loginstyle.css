@@ -56,7 +56,10 @@
     color: red;
     font-size: 18px;
     padding: 10px;
-    
+    border: 1px solid white ;
+    background: #ebe9e9;
+    margin: 15px 0;
+    border-radius: 3px;
 }
 input{
     width: 100%;
